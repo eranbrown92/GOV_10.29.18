@@ -8,9 +8,9 @@ import "./styles.css";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header className='header' branding="Header" />
-        <Summary className='summary' />
+      <div className="row">
+        <Header branding="Header" />
+        <Summary className="col s9" />
       </div>
     );
   }
