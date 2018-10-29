@@ -9,7 +9,8 @@ class CheckoutForm extends React.Component {
   }
   onSubmit(e) {
     e.preventDefault();
-      this.props.handleFormData(this.state)
+    this.props.handleFormData(this.state)
+    e.target.reset()
   }
   onChange(e){
     this.setState({
