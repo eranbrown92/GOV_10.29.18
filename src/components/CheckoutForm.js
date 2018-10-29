@@ -4,18 +4,18 @@ class CheckoutForm extends React.Component {
   constructor() {
     super();
     this.state = {};
-    this.onChange = this.onChange.bind(this)
-    this.onSubmit= this.onSubmit.bind(this)
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(e) {
     e.preventDefault();
-    this.props.handleFormData(this.state)
-    e.target.reset()
+    this.props.handleFormData(this.state);
+    e.target.reset();
   }
-  onChange(e){
+  onChange(e) {
     this.setState({
-      [e.target.name]:e.target.value
-    })
+      [e.target.name]: e.target.value
+    });
   }
   render() {
     return (
@@ -23,25 +23,28 @@ class CheckoutForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <div>
             <label>Name: </label>
-            <input type="text"
-             name="name"
-             value={this.state.value}
+            <input
+              type="text"
+              name="name"
+              value={this.state.value}
               onChange={this.onChange}
               required
-              />
+            />
           </div>
           <div>
             <label>Reason: </label>
-            <input type="text"
-             name="reason"
-             value={this.state.value}
-             onChange={this.onChange}
+            <input
+              type="text"
+              name="reason"
+              value={this.state.value}
+              onChange={this.onChange}
               required
-              />
+            />
           </div>
           <div>
             <label>Building: </label>
-            <input type="text"
+            <input
+              type="text"
               name="building"
               value={this.state.value}
               onChange={this.onChange}
@@ -50,7 +53,8 @@ class CheckoutForm extends React.Component {
           </div>
           <div>
             <label>Time out: </label>
-            <input type="time"
+            <input
+              type="time"
               name="timeout"
               value={this.state.value}
               onChange={this.onChange}
@@ -58,8 +62,9 @@ class CheckoutForm extends React.Component {
             />
           </div>
           <p>
-            <input type="submit" value="submit" />
+            <input className='waves-effect waves-light light-blue btn' type="submit" value="submit" />
           </p>
+          
         </form>
       </div>
     );

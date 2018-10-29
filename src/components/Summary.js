@@ -17,7 +17,7 @@ class Summary extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='container'>
         <h1>Summary</h1>
         <CheckoutForm handleFormData={this.handleFormData}/>
         {this.state.details.map((user, id) => {

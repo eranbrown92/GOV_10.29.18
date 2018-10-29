@@ -1,11 +1,13 @@
 import React from "react";
 
-const Header = (props) => {
-  const {branding} = props
+const Header = props => {
+  const { branding } = props;
   return (
-    <div>
-      <h1>{branding}</h1>
-    </div>
+    <nav>
+      <div className="nav-wrapper light-blue">
+        <a href="#!" className="brand-logo center">{branding}</a>
+      </div>
+    </nav>
   );
 };
 export default Header;
