@@ -4,8 +4,8 @@ class VehicleOut extends React.Component {
   render() {
     const { user, uid } = this.props;
     return (
-      <div>
-        <ul key={uid} className="collection with-header">
+      <div key={uid}>
+        <ul  className="collection with-header">
           <li className="collection-header">
             <h4>{user.name}</h4>
           </li>
