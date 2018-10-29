@@ -26,6 +26,7 @@ class CheckoutForm extends React.Component {
              name="name"
              value={this.state.value}
               onChange={this.onChange}
+              required
               />
           </div>
           <div>
@@ -34,6 +35,7 @@ class CheckoutForm extends React.Component {
              name="reason"
              value={this.state.value}
              onChange={this.onChange}
+              required
               />
           </div>
           <div>
@@ -42,6 +44,7 @@ class CheckoutForm extends React.Component {
               name="building"
               value={this.state.value}
               onChange={this.onChange}
+              required
             />
           </div>
           <div>
@@ -50,6 +53,7 @@ class CheckoutForm extends React.Component {
               name="timeout"
               value={this.state.value}
               onChange={this.onChange}
+              required
             />
           </div>
           <p>
