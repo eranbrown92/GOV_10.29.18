@@ -5,7 +5,9 @@ const Header = props => {
   return (
     <nav>
       <div className="nav-wrapper light-blue">
-        <a href="#!" className="brand-logo center">{branding}</a>
+        <a href="#!" className="brand-logo center">
+          {branding}
+        </a>
       </div>
     </nav>
   );

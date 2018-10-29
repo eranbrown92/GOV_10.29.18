@@ -8,18 +8,17 @@ class Summary extends React.Component {
     this.state = {
       details: []
     };
-    this.handleFormData = this.handleFormData.bind(this)
+    this.handleFormData = this.handleFormData.bind(this);
   }
-  handleFormData(e){
+  handleFormData(e) {
     this.setState({
       details: [...this.state.details, e]
-    })
+    });
   }
   render() {
     return (
-      <div className='container'>
-        <h1>Summary</h1>
-        <CheckoutForm handleFormData={this.handleFormData}/>
+      <div className="container">
+        <CheckoutForm handleFormData={this.handleFormData} />
         {this.state.details.map((user, id) => {
           return <VehicleOut uid={id} user={user} />;
         })}

@@ -5,8 +5,10 @@ class VehicleOut extends React.Component {
     const { user, uid } = this.props;
     return (
       <div>
-        <ul  key={uid} className="collection with-header">
-          <li className="collection-header"><h4>{user.name}</h4></li>
+        <ul key={uid} className="collection with-header">
+          <li className="collection-header">
+            <h4>{user.name}</h4>
+          </li>
           <li className="collection-item">Reason: {user.reason}</li>
           <li className="collection-item">Building: {user.building}</li>
           <li className="collection-item">Time Out: {user.timeout}</li>
