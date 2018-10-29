@@ -18,10 +18,14 @@ class Summary extends React.Component {
   render() {
     return (
       <div>
-        <CheckoutForm handleFormData={this.handleFormData} />
-        {this.state.details.map((user, id) => {
-          return <VehicleOut uid={id} user={user} />;
-        })}
+        <div>
+          <CheckoutForm handleFormData={this.handleFormData} />
+        </div>
+        <div className="col s9">
+          {this.state.details.map((user, id) => {
+            return <VehicleOut key={id} user={user} />;
+          })}
+        </div>
       </div>
     );
   }

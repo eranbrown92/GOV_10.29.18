@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="row">
         <Header branding="Header" />
-        <Summary className="col s9" />
+        <Summary />
       </div>
     );
   }

@@ -19,8 +19,8 @@ class CheckoutForm extends React.Component {
   }
   render() {
     return (
-      <div className='col s3  full-width'>
-        <form onSubmit={this.onSubmit}>
+      <div >
+        <form onSubmit={this.onSubmit} className='col s3'>
           <div>
             <label>Name: </label>
             <input
