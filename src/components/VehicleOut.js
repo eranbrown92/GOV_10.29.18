@@ -1,12 +1,9 @@
 import React from "react";
 
 class VehicleOut extends React.Component {
-  handleClick(e){
-    const user = document.getElementById('user').innerHTML
-    alert(`${user} returned a GOV at ` + Date.toString())
-  }
   render() {
-    const { user } = this.props;
+    // deconstructor
+    const { user, returnFromJob } = this.props;
     return (
       <div>
         <ul className="collection with-header">
@@ -18,7 +15,7 @@ class VehicleOut extends React.Component {
           <li className="collection-item">
             <div>
               Time Out: {user.timeout}
-              <a  onClick={this.handleClick}href="#!" className="secondary-content">
+              <a  onClick={returnFromJob}href="#!" className="secondary-content">
                 <i className="red-text">Return</i>
               </a>
             </div>
