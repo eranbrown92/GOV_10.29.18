@@ -6,16 +6,21 @@ class VehicleOut extends React.Component {
     const { user, returnFromJob } = this.props;
     return (
       <div>
-        <ul className="collection with-header">
+        <ul className="collection with-header z-depth-3">
           <li className="collection-header light-blue">
-            <h4 id='user'>{user.name}</h4>
+            <h4 id="user" className="white-text">
+              {user.name}
+            </h4>
           </li>
           <li className="collection-item">Reason: {user.reason}</li>
           <li className="collection-item">Building: {user.building}</li>
           <li className="collection-item">
             <div>
               Time Out: {user.timeout}
-              <a  onClick={returnFromJob}href="#!" className="secondary-content">
+              <a
+                onClick={returnFromJob}
+                href="#!"
+                className="secondary-content">
                 <i className="red-text">Return</i>
               </a>
             </div>

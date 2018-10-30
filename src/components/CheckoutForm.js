@@ -19,14 +19,14 @@ class CheckoutForm extends React.Component {
   }
   render() {
     return (
-      <div >
-        <form onSubmit={this.onSubmit} className='col s3'>
+      <div>
+        <form onSubmit={this.onSubmit} className="col s3 z-depth-3">
           <div>
             <label>Name: </label>
             <input
               type="text"
               name="name"
-              placeholder='Rank/Name'
+              placeholder="Rank/Name"
               value={this.state.value}
               onChange={this.onChange}
               required
@@ -37,7 +37,7 @@ class CheckoutForm extends React.Component {
             <input
               type="text"
               name="reason"
-              placeholder='Ticket'
+              placeholder="Ticket"
               value={this.state.value}
               onChange={this.onChange}
               required
@@ -48,7 +48,7 @@ class CheckoutForm extends React.Component {
             <input
               type="text"
               name="building"
-              placeholder='9000'
+              placeholder="9000"
               value={this.state.value}
               onChange={this.onChange}
               required
@@ -65,7 +65,7 @@ class CheckoutForm extends React.Component {
             />
           </div>
           <p>
-            <input className='waves-effect waves-light light-blue btn' type="submit" value="submit" />
+            <input className="light-blue btn" type="submit" value="submit" />
           </p>
         </form>
       </div>

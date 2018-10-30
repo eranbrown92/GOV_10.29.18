@@ -15,13 +15,13 @@ class Summary extends React.Component {
       details: [...this.state.details, e]
     });
   }
-  returnFromJob(id){
+  returnFromJob(id) {
     // copy the state
-   const stateCopy = Object.assign([], this.state.details)
-   // remove the id from the state.details array
-   stateCopy.splice(id, 1)
-   // update state
-   this.setState({details: stateCopy})
+    const stateCopy = Object.assign([], this.state.details);
+    // remove the id from the state.details array
+    stateCopy.splice(id, 1);
+    // update state
+    this.setState({ details: stateCopy });
   }
   render() {
     return (
@@ -31,11 +31,13 @@ class Summary extends React.Component {
         </div>
         <div className="col s9">
           {this.state.details.map((user, id) => {
-            return <VehicleOut 
-            key={id} 
-            user={user}
-            returnFromJob={this.returnFromJob.bind(this, id)}
-             />;
+            return (
+              <VehicleOut
+                key={id}
+                user={user}
+                returnFromJob={this.returnFromJob.bind(this, id)}
+              />
+            );
           })}
         </div>
       </div>
