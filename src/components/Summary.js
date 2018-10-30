@@ -7,7 +7,7 @@ class Summary extends React.Component {
     super();
     this.state = {
       details: [],
-      availGov: 1
+      availGov: 0
     };
     this.handleFormData = this.handleFormData.bind(this);
   }
@@ -23,21 +23,48 @@ class Summary extends React.Component {
     // remove the id from the state.details array
     stateCopy.splice(id, 1);
     // update state
-    this.setState({ details: stateCopy, availGov: this.state.availGov + 1 });
-    console.log(id, ' returned at ', Date())
+    this.setState({ 
+      details: stateCopy,
+      availGov: this.state.availGov + 1
+    }); 
   }
   render() {
     return (
       <div>
         <div>
-          <CheckoutForm 
-          handleFormData={this.handleFormData} 
-          availGov={this.state.availGov}
-          />
+        {this.state.availGov >0?
+            <CheckoutForm
+              handleFormData={this.handleFormData}
+              availGov={this.state.availGov}
+            />:
+            <div className="col s3 z-depth-3 center ">
+              <div className="preloader-wrapper big active">
+                <div className="spinner-layer spinner-blue-only">
+                  <div className="circle-clipper left">
+                    <div className="circle"></div>
+                  </div><div className="gap-patch">
+                    <div className="circle"></div>
+                  </div><div className="circle-clipper right">
+                    <div className="circle"></div>
+                  </div>
+                </div>
+              </div>
+              <div className='row'>
+                <blockquote>
+                  Patiently waiting for someone to return 
+                  </blockquote>
+              </div>
+            </div>
+         }
+          
         </div>
         <div className="col s9">
-            <div className="nav-wrapper center">
-            <div className="chip">{this.state.availGov <= 0 ? 'Sorry, there are no available GOVs' : `${this.state.availGov} available GOV(s)` }</div>
+            <div className="center">
+              <div className="chip">
+                {this.state.availGov <= 0 ?
+                'Sorry, there are no available GOVs' :
+                `${this.state.availGov} available GOV(s)`}
+              </div>
             </div>
           {this.state.details.map((user, id) => {
             return (
