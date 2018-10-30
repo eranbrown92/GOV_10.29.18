@@ -6,7 +6,8 @@ class Summary extends React.Component {
   constructor() {
     super();
     this.state = {
-      details: []
+      details: [],
+      availGov: 2
     };
     this.handleFormData = this.handleFormData.bind(this);
   }
@@ -22,6 +23,7 @@ class Summary extends React.Component {
     stateCopy.splice(id, 1);
     // update state
     this.setState({ details: stateCopy });
+    console.log(id, ' returned at ', Date())
   }
   render() {
     return (
@@ -30,6 +32,9 @@ class Summary extends React.Component {
           <CheckoutForm handleFormData={this.handleFormData} />
         </div>
         <div className="col s9">
+            <div className="nav-wrapper center">
+              <div className="chip">Available GOV: {this.state.availGov}</div>
+            </div>
           {this.state.details.map((user, id) => {
             return (
               <VehicleOut

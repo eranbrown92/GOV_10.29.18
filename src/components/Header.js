@@ -3,7 +3,7 @@ import React from "react";
 const Header = props => {
   const { branding } = props;
   return (
-    <div className='row'>
+    <div className="row">
       <nav>
         <div className="nav-wrapper light-blue">
           <a href="#!" className="brand-logo center">
@@ -12,7 +12,6 @@ const Header = props => {
         </div>
       </nav>
     </div>
-    
   );
 };
 export default Header;
