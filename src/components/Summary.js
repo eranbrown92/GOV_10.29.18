@@ -7,7 +7,7 @@ class Summary extends React.Component {
     super();
     this.state = {
       details: [],
-      availGov: 0
+      availGov: 1
     };
     this.handleFormData = this.handleFormData.bind(this);
   }
@@ -37,8 +37,8 @@ class Summary extends React.Component {
               handleFormData={this.handleFormData}
               availGov={this.state.availGov}
             />:
-            <div className="col s3 z-depth-3 center ">
-              <div className="preloader-wrapper big active">
+            <div className="col s3 center ">
+              <div className="preloader-wrapper z-depth-3 circle big active ">
                 <div className="spinner-layer spinner-blue-only">
                   <div className="circle-clipper left">
                     <div className="circle"></div>
